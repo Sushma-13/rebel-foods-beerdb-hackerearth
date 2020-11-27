@@ -1,0 +1,13 @@
+.info {
+    font-weight: 500;
+}
+
+.card:hover {
+    box-shadow: 0 0.5rem 1rem lightgrey;
+    transform: translateY(-10px);
+    transition: 0.7s;
+}
+
+.card-body {
+    padding: 0 1.25rem;
+}

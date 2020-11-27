@@ -1,0 +1,12 @@
+.beer-page {
+    padding: 1.5rem
+}
+
+.page-item {
+    cursor: pointer;
+}
+
+.disable {
+    cursor: no-drop !important;
+    background-color: gainsboro;
+}

@@ -1,0 +1,29 @@
+<div class="card p-2 mb-3 mx-auto" style="max-width:30rem;height: 10rem;">
+    <div class="row no-gutters h-100">
+        <div class="col-4 h-100">
+            <img src={{imageSrc.image}} class="card-img img-fluid h-100" style="object-fit: fill;" alt="beer-image">
+        </div>
+        <div class="col-8 h-100">
+            <div class="card-body h-100">
+                <h5 class="card-title" style="margin-bottom: 0;">{{beerDetail.name}} </h5>
+                <p class="card-text"><small class="text-muted info">{{beerDetail.style}}</small></p>
+                <div class="row" style="width: 100%;
+                position: absolute;
+                bottom: 0.1rem;">
+                    <div class="col">
+                        <p class="card-text"><small class="text-muted"><span class="info">ABV:</span>
+                                {{beerDetail.abv}}</small></p>
+                    </div>
+                    <div class="col">
+                        <p class="card-text"><small class="text-muted"><span class="info">IBU:</span>
+                                {{beerDetail.ibu}}</small></p>
+                    </div>
+                    <div class="col">
+                        <p class="card-text"><small class="text-muted"><span class="info">OUNCES:</span>
+                                {{beerDetail.ounces}}</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

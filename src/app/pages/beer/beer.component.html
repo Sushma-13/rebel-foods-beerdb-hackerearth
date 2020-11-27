@@ -1,0 +1,32 @@
+<div class="beer-page ">
+    <!-- search -->
+    <div class="input-group mb-3 mx-auto" style="width: 15rem;">
+        <input (keyup)="search($event.target.value)" type="text" class="form-control" placeholder="Search"
+            aria-label="Search" style="text-align: center;
+            border-radius: 2rem;">
+    </div>
+
+    <!-- list -->
+    <product-card [beerDetail]="beer" [imageSrc]="beerimages[i%5]"
+        *ngFor="let beer of tempBeerCraft | slice:offset:offset+pageSize;let i =index">
+    </product-card>
+    <!-- pagination -->
+    <nav class="mx-auto text-center" aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" (click)="changePage('first')">First</a></li>
+            <li class="page-item" (click)="changePage('previous')" [ngClass]="{'disable': currentPage === 1}">
+                <a class="page-link" aria-label="Previous" [ngClass]="{'disable': currentPage === 1}">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link">{{currentPage}}</a></li>
+            <li class="page-item" (click)="changePage('next')" [ngClass]="{'disable': currentPage === totalPages}">
+                <a class="page-link" aria-label="Next" [ngClass]="{'disable': currentPage === totalPages}">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link" (click)="changePage('last')">Last</a></li>
+        </ul>
+        <div class=""> Page: {{currentPage}} of {{totalPages}}</div>
+    </nav>
+</div>
